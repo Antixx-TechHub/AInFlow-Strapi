@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "featuredblogs",
+  "info": {
+    "singularName": "featuredblog",
+    "pluralName": "featuredblogs",
+    "displayName": "Featured Blog",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "shortDesc": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date"
+    },
+    "longDesc": {
+      "type": "richtext"
+    },
+    "btnText": {
+      "type": "string",
+      "default": "Continue Reading →"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "videos",
+        "audios",
+        "files"
+      ]
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.seo"
+    },
+    "featured_blog_categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::featured-blog-category.featured-blog-category",
+      "mappedBy": "featured_blogs"
+    }
+  }
+}

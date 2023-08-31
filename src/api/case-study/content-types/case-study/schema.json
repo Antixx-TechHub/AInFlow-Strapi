@@ -19,7 +19,7 @@
       "type": "date"
     },
     "shortDesc": {
-      "type": "string"
+      "type": "text"
     },
     "longDesc": {
       "type": "richtext"
@@ -31,7 +31,7 @@
     "image": {
       "type": "media",
       "multiple": false,
-      "required": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files",
@@ -45,14 +45,28 @@
     },
     "seo": {
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "shared.seo"
     },
-    "case_studies_categories": {
+    "case_study_categories": {
       "type": "relation",
       "relation": "manyToMany",
-      "target": "api::case-studies-category.case-studies-category",
+      "target": "api::case-study-category.case-study-category",
       "mappedBy": "case_studies"
+    },
+    "author": {
+      "type": "string"
+    },
+    "avtar": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     }
   }
 }

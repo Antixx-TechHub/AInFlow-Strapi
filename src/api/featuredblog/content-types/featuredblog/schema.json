@@ -16,7 +16,7 @@
       "type": "string"
     },
     "shortDesc": {
-      "type": "string"
+      "type": "text"
     },
     "date": {
       "type": "date"
@@ -31,7 +31,7 @@
     "image": {
       "type": "media",
       "multiple": false,
-      "required": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "videos",
@@ -45,14 +45,28 @@
     },
     "seo": {
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "shared.seo"
     },
-    "featured_blog_categories": {
+    "featured_categories": {
       "type": "relation",
       "relation": "manyToMany",
-      "target": "api::featured-blog-category.featured-blog-category",
+      "target": "api::featuredcategory.featuredcategory",
       "mappedBy": "featured_blogs"
+    },
+    "author": {
+      "type": "string"
+    },
+    "avtar": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     }
   }
 }
