@@ -15,9 +15,9 @@ module.exports = ({ env }) => ({
     config: {
       provider: "cloudinary",
       providerOptions: {
-        cloud_name: "antixx-techhub",
-        api_key: "867656517325614",
-        api_secret: "2wk2P3OGcGdsUo-Q_4Y4voIVE-U",
+        cloud_name: "ainflow-cloudnary",
+        api_key: "572318626483262",
+        api_secret: "NeHtR0WgwI15iyeslTMkXW9HLXI",
       },
       actionOptions: {
         upload: {},
